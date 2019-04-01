@@ -3,7 +3,8 @@
 # WORKSHOP
   Implementing 5 Controller View Methods
   
-  #[LINK TO THE REPO]
+  -[LINK TO THE REPO](https://rajeshoo7.github.io/Implementing-Controller-View-Methods/)
+  
 ## GROUP MEMBERS
 - RAJESH KAMMARI
 - BHUVANESH NAKKA
