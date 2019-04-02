@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
 
 // Defer path requests to a particular controller
 router.use('/about', require('../controllers/about.js'))
-router.use('/customer', require('../controllers/transaction.js'))
+router.use('/transaction', require('../controllers/transaction.js'))
 
 LOG.debug('END routing')
 module.exports = router

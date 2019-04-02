@@ -48,7 +48,7 @@ api.get('/findall', (req, res) => {
       {
         title: 'Create transaction',
         layout: 'layout.ejs',
-        transaction: item
+        transactions: item
       })
   })
   
@@ -130,15 +130,11 @@ api.get('/findall', (req, res) => {
     if (!item) { return res.end(notfoundstring) }
     LOG.info(`ORIGINAL VALUES ${JSON.stringify(item)}`)
     LOG.info(`UPDATED VALUES: ${JSON.stringify(req.body)}`)
-    item.email = req.body.email
-    item.given = req.body.given
-    item.family = req.body.family
-    item.street1 = req.body.street1
-    item.street2 = req.body.street2
-    item.city = req.body.city
-    item.state = req.body.state
-    item.zip = req.body.zip
-    item.country = req.body.country
+    item.Acoounttype = req.body.Acoounttype
+    item.AccountNumber = req.body.AccountNumber
+    item.Amount = req.body.Amount
+    item.AvailbleBalance = req.body.AvailbleBalance
+    item.Categeory = req.body.Categeory
     LOG.info(`SAVING UPDATED transaction ${JSON.stringify(item)}`)
     return res.redirect('/transaction')
   })
@@ -149,7 +145,7 @@ api.get('/findall', (req, res) => {
     const id = parseInt(req.params.id)
     LOG.info(`Handling REMOVING ID=${id}`)
     const data = req.app.locals.transaction.query
-    const item = find(data, { _id: id })
+    const item = find(data, { _Accountid: id })
     if (!item) { return res.end(notfoundstring) }
     if (item.isActive) {
       item.isActive = false
