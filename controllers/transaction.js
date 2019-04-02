@@ -27,7 +27,7 @@ api.get('/findall', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
     const id = parseInt(req.params.id)
     const data = req.app.locals.transaction.query
-    const item = find(data, { _id: id })
+    const item = find(data, { _Accountid: id })
     if (!item) { return res.end(notfoundstring) }
     res.send(JSON.stringify(item))
   })
@@ -57,7 +57,7 @@ api.get('/findall', (req, res) => {
     LOG.info(`Handling GET /delete/:id ${req}`)
     const id = parseInt(req.params.id)
     const data = req.app.locals.transaction.query
-    const item = find(data, { _id: id })
+    const item = find(data, { _Accountid: id })
     if (!item) { return res.end(notfoundstring) }
     LOG.info(`RETURNING VIEW FOR ${JSON.stringify(item)}`)
     return res.render('transaction/delete.ejs',
@@ -73,7 +73,7 @@ api.get('/findall', (req, res) => {
     LOG.info(`Handling GET /details/:id ${req}`)
     const id = parseInt(req.params.id)
     const data = req.app.locals.transaction.query
-    const item = find(data, { _id: id })
+    const item = find(data, { _Accountid: id })
     if (!item) { return res.end(notfoundstring) }
     LOG.info(`RETURNING VIEW FOR ${JSON.stringify(item)}`)
     return res.render('transaction/details.ejs',
@@ -89,7 +89,7 @@ api.get('/findall', (req, res) => {
     LOG.info(`Handling GET /edit/:id ${req}`)
     const id = parseInt(req.params.id)
     const data = req.app.locals.transaction.query
-    const item = find(data, { _id: id })
+    const item = find(data, { _Accountid: id })
     if (!item) { return res.end(notfoundstring) }
     LOG.info(`RETURNING VIEW FOR${JSON.stringify(item)}`)
     return res.render('transaction/edit.ejs',
@@ -108,17 +108,13 @@ api.get('/findall', (req, res) => {
     LOG.debug(JSON.stringify(req.body))
     const data = req.app.locals.transaction.query
     const item = new Model()
-    LOG.info(`NEW ID ${req.body._id}`)
-    item._id = parseInt(req.body._id)
-    item.email = req.body.email
-    item.given = req.body.given
-    item.family = req.body.family
-    item.street1 = req.body.street1
-    item.street2 = req.body.street2
-    item.city = req.body.city
-    item.state = req.body.state
-    item.zip = req.body.zip
-    item.country = req.body.country
+    LOG.info(`NEW ID ${req.body._Accountid}`)
+    item._Accountid = parseInt(req.body._Accountid)
+    item.Acoounttype = req.body.Acoounttype
+    item.AccountNumber = req.body.AccountNumber
+    item.Amount = req.body.Amount
+    item.AvailbleBalance = req.body.AvailbleBalance
+    item.Categeory = req.body.Categeory
     data.push(item)
     LOG.info(`SAVING NEW transaction ${JSON.stringify(item)}`)
     return res.redirect('/transaction')
@@ -130,7 +126,7 @@ api.get('/findall', (req, res) => {
     const id = parseInt(req.params.id)
     LOG.info(`Handling SAVING ID=${id}`)
     const data = req.app.locals.transaction.query
-    const item = find(data, { _id: id })
+    const item = find(data, { _Accountid: id })
     if (!item) { return res.end(notfoundstring) }
     LOG.info(`ORIGINAL VALUES ${JSON.stringify(item)}`)
     LOG.info(`UPDATED VALUES: ${JSON.stringify(req.body)}`)
