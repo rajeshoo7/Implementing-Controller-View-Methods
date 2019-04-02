@@ -1,0 +1,39 @@
+{
+  "name": "node-express-mvc-ejs-bootstrap-starter",
+  "version": "0.0.1",
+  "description": "Node Express MVC EJS Bootstrap Starter app",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/professorcase/node-express-mvc-ejs-start"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "latest"
+  },
+  "dependencies": {
+    "array-flatten": "latest",
+    "async": "latest",
+    "body-parser": "latest",
+    "consolidate": "latest",
+    "dotenv": "latest",
+    "ejs": "latest",
+    "errorhandler": "latest",
+    "express": "latest",
+    "express-ejs-layouts": "latest",
+    "express-status-monitor": "latest",
+    "express-validator": "latest",
+    "lodash": "latest",
+    "lodash.find": "latest",
+    "lodash.findindex": "latest",
+    "lodash.remove": "latest",
+    "mongoose": "latest",
+    "nedb": "latest",
+    "request": "latest",
+    "serve-favicon": "latest",
+    "winston": "latest"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
