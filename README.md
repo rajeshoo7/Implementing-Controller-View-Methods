@@ -9,7 +9,8 @@
   1. UPDATE
   1. LIST
   
-  [LINK TO THE REPO](https://rajeshoo7.github.io/Implementing-Controller-View-Methods/)
+  ## LINK TO THE REPO
+  [https://github.com/rajeshoo7/Implementing-Controller-View-Methods](https://github.com/rajeshoo7/Implementing-Controller-View-Methods)
   
 ## GROUP MEMBERS
 - RAJESH KAMMARI
