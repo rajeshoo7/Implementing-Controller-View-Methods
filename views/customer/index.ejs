@@ -1,0 +1,43 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="transaction/create" class="btn btn-primary new">
+        Create a new Transaction
+      </a>
+
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= customers.query.length %> customers.
+        <br>
+      </p>
+      <% for (var i = customers.query.length-1; i >= 0; i--) {   
+        customer = customers.query[i];   %>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="text-muted pull-right"></div>
+        <div class="panel-body">
+
+          <br> ID: <%=  customer._id %>
+          <br> Email: <%=customer.email%>
+          <br> Given: <%=customer.given%>
+          <br> Family: <%=customer.family%>
+          <br> Account Number: <%=customer.accountNumber%>
+          <br> Transaction Type: <%=customer.transactionType %>
+          <br> Amount: <%=customer.amount %>
+
+          <hr>
+          <a href="/transaction/delete/<%= customer._id  %>" class="btn btn-danger"> Delete </a>
+          <a href="/transaction/details/<%= customer._id %>" class="btn btn-info"> Details </a>
+          <a href="/transaction/edit/<%= customer._id %>" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>

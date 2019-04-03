@@ -1,0 +1,38 @@
+[
+  {
+    "_id": 91,
+    "email": "s533975@nwmissouri.edu",
+    "given": "Valentine",
+    "family": "Osakwe",
+    "accountNumber": "12349084",
+    "transactionType": "Deposit",
+    "amount": "23450"
+  },
+  {
+    "_id": 92,
+    "email": "S533901@nwmissouri.edu",
+    "given": "Bhuvanesh",
+    "family": "Nakka",
+    "accountNumber": "6789012344",
+    "transactionType": "Withdraw",
+    "amount": "19023"
+  },
+  {
+    "_id": 93,
+    "email": "s533708@nwmissouri.edu",
+    "given": "Vamshi Krishna ",
+    "family": "Yedalla",
+    "accountNumber": "989012345",
+    "transactionType": "Withdraw",
+    "amount": "190967"
+  },
+  {
+    "_id": 94,
+    "email": "rajeshsai.kammmari@gmail.com",
+    "given": "Rajesh",
+    "family": "Kammari",
+    "accountNumber": "6789012341",
+    "transactionType": "Withdraw",
+    "amount": "1000000"
+  }
+]

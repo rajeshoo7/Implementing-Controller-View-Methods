@@ -1,0 +1,29 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>Confirm deletion of transaction</h2>
+      <br>
+      <br> ID: <%=  customer._id %>
+      <br> Email: <%=customer.email%>
+      <br> Given: <%=customer.given%>
+      <br> Family: <%=customer.family%>
+      <br> Account Number: <%=customer.accountNumber%>
+      <br> Transaction Type: <%=customer.transactionType %>
+      <br> Amount: <%=customer.amount %>
+      <hr>
+      
+      <form method="get" action="/transaction">
+        <input type="submit" value="Return to list" class="btn btn-caution" />
+      </form>
+
+
+      <form method="POST" action="/transaction/delete/<%= customer._id %>">
+        <input type="submit" value="Delete this item" class="btn btn-danger pull-right" />
+      </form>
+
+    </div>
+  </div>
+</div>
