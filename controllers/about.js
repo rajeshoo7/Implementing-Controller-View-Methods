@@ -33,6 +33,14 @@ api.get('/dev3', (req, res) => {
     })
 })
 
+// GET dev4
+api.get('/dev4', (req, res) => {
+  LOG.info(`Handling GET /dev4 ${req}`)
+  res.render('about/dev4/index.ejs',
+    {
+      layout: 'layout.ejs'
+    })
+})
 
 
 
